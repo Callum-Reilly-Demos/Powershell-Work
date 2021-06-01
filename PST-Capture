@@ -1,0 +1,8 @@
+## users often don't know where their PST Files are, 
+## Sign them into the old VPN token, ask them for Their Asset ID and run the below on your machine.
+
+
+$Asset = Read-Host -Prompt 'Please enter customer Asset ID' 
+
+
+Get-ChildItem \\$Asset\C$\ -Include '*.pst' -Recurse | Compress-Archive -DestinationPath \\$Asset\C$\localdata\
