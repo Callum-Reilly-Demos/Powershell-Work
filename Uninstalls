@@ -1,0 +1,10 @@
+## Get a list of all installed MSI's on machine and their default install location
+
+
+Get-CimInstance win32_product | select-object InstallDate, Name, Version, LocalPackage, InstallSource  | Out-File 'C:\Temp2\install-report.text'
+
+##  all installed items in registry + uninstall strings 
+
+
+ Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher, InstallDate, InstallSource, InstallLocation, UninstallString | Export-Csv "C:\Temp2\Software.csv"
+
