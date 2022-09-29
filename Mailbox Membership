@@ -1,0 +1,1 @@
+Get-ADGroupMember -Identity "mailbox identity" | Export-Csv C:\temp\BoxMembers.csv
