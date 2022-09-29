@@ -1,0 +1,4 @@
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription" `
+-Name "LongTranscripting" -Value 0 -PropertyType DWORD -Force
+
+/* stops powershell transcript logging on device */
