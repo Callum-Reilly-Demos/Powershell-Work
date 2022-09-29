@@ -1,0 +1,2 @@
+
+Get-ADGroup -LDAPFilter "(ManagedBy=$((Get-ADuser -Identity "Callum.Reilly").distinguishedname))" | Export-Csv  C:\Temp\Callum.csv
