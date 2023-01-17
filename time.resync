@@ -1,0 +1,4 @@
+net stop w32time
+w32tm /config /syncfromflags:manual /manualpeerlist: {NTP SERVER}
+net start w32time
+w32tm /resync
